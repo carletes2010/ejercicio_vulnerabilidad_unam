@@ -35,9 +35,7 @@ sasno-lab/
     ├── index.php
     ├── config.php
     └── assets/
-
-
-⸻
+---
 
 ##▶️ Cómo correrlo
 
@@ -48,7 +46,7 @@ Abrir en el navegador:
 http://localhost
 
 
-⸻
+---
 
 ##📦 Entrega
 	•	Usuario y rol
