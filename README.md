@@ -39,7 +39,7 @@ sasno-lab/
 
 ⸻
 
-▶️ Cómo correrlo
+##▶️ Cómo correrlo
 
 docker-compose up -d
 
@@ -50,7 +50,7 @@ http://localhost
 
 ⸻
 
-📦 Entrega
+##📦 Entrega
 	•	Usuario y rol
 	•	Las 3 flags
 	•	Explicación corta de:
@@ -59,7 +59,7 @@ http://localhost
 
 ⸻
 
-⚠️ Nota
+##⚠️ Nota
 	•	Vulnerabilidad intencional
 	•	Todo es falso / simulado
 	•	No usar en producción ❌
