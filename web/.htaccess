@@ -1,0 +1,28 @@
+# Activar el motor de reescritura
+RewriteEngine On
+
+# Establecer la base de reescritura a la raíz del documento
+RewriteBase /
+
+# Redirigir todas las solicitudes que no sean archivos o directorios existentes a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Opcional: Deshabilitar la visualización de directorios
+Options -Indexes
+
+# Opcional: Configuración de seguridad básica
+<FilesMatch "\.(inc|log|sh|bak|sql|yml|json|md|txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Opcional: Encabezados de seguridad
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "no-referrer-when-downgrade"
+    Header always set Content-Security-Policy "frame-ancestors 'self'"
+</IfModule>
